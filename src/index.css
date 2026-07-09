@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inter+Tight:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* OPTICAL WHITE - Light Mode */
+    --background: 40 33% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 220 89% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 220 89% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
+    --ring: 220 89% 56%;
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --surface: #FDFBF7;
+    --surface-elevated: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-muted: #6B6B6B;
+    --border-line: #E5E2DA;
+    --accent-blue: #2563EB;
+    --neural-blue: #2563EB;
+    --deep-amethyst: #4F46E5;
+
+    --font-heading: 'Inter Tight', 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Inter Tight', 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* VOID BLACK - Dark Mode */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 220 89% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 56%;
+    --accent: 220 89% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 220 89% 56%;
+
+    --surface: #0A0A0A;
+    --surface-elevated: #121212;
+    --text-primary: #FFFFFF;
+    --text-muted: #8F8F8F;
+    --border-line: #1F1F1F;
+    --accent-blue: #2563EB;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background-color: var(--surface) !important;
+    color: var(--text-primary);
+    cursor: none;
+    overflow-x: hidden;
+  }
+
+  a, button, [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-line);
+  border-radius: 2px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #262626;
+}
+
+/* Custom Cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease, border-radius 0.25s ease;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1), 
+              height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.25s ease;
+  will-change: transform;
+}
+
+.cursor-view-mode .cursor-dot {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-view-mode .cursor-ring {
+  width: 80px;
+  height: 80px;
+  opacity: 0.4;
+}
+
+/* Gradient mesh background */
+.mesh-gradient {
+  background: radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(79, 70, 229, 0.03) 0%, transparent 60%),
+              radial-gradient(ellipse at 60% 80%, rgba(37, 99, 235, 0.02) 0%, transparent 60%);
+}
+
+.dark .mesh-gradient {
+  background: radial-gradient(ellipse at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(79, 70, 229, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 60% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 60%);
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Blueprint grid lines */
+.blueprint-lines {
+  background-image: 
+    linear-gradient(to right, var(--border-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-line) 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.06;
+}
+
+/* Bento card hover micro-visualizer */
+.dot-grid-pattern {
+  background-image: radial-gradient(circle, var(--accent-blue) 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: 0.12;
+  transition: opacity 0.3s ease;
+}
+
+.bento-card:hover .dot-grid-pattern {
+  opacity: 0.22;
+}
+
+/* Wave pattern */
+@keyframes wave-shift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+/* Pulse pattern */
+@keyframes pulse-ring {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.08); opacity: 0.28; }
+}
+
+/* Selection */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--text-primary);
+}
+
+/* Smooth theme transition */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
+
+/* Line mask animation */
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 3px;
+}
+
+/* Spin keyframe */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Map CSS custom properties to Tailwind surface/surface-elevated classes */
+.bg-surface { background-color: var(--surface); }
+.bg-surface-elevated { background-color: var(--surface-elevated); }
+.text-surface-primary { color: var(--text-primary); }
+.text-surface-muted { color: var(--text-muted); }
+.border-surface { border-color: var(--border-line); }
+
+/* LOVABLE: Carousel 3D styles (copied/adapted) */
+.carousel-stage {
+  perspective: 1600px;
+  height: 480px;
+  position: relative;
+}
+.carousel-ring {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.carousel-card {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 520px;
+  height: 340px;
+  margin: -170px 0 0 -260px;
+  border-radius: 0px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+@media (max-width: 810px) {
+  .carousel-card { width: 360px; height: 240px; margin: -120px 0 0 -180px; }
+  .carousel-stage { height: 380px; }
+}
+@media (max-width: 480px) {
+  .carousel-card { width: 280px; height: 190px; margin: -95px 0 0 -140px; }
+  .carousel-stage { height: 320px; }
+}
+
+/* small helper for tag */
+.tag { padding: 6px 10px; border-radius: 9999px; font-weight: 600; font-size: 11px; }
+
+/* Preloader (Lovable) */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--surface);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 48px;
+  transition: transform 1.2s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+}
+.preloader-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.preloader-mark {
+  font-size: clamp(80px, 18vw, 220px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+.preloader-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.preloader-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+.preloader-bar {
+  height: 1px;
+  background: var(--border-line);
+  overflow: hidden;
+}
+.preloader-fill {
+  height: 100%;
+  background: #0066FF;
+  transition: width 0.15s linear;
+}

@@ -1,0 +1,116 @@
+Name
+Artificial Intelligence and Machine Learning using Python
+
+Issuing organization*
+NIELIT
+
+Date : June 23rd, 2025
+
+Credential ID
+NVA-C-SP33-1-3885
+
+Name*
+Python Essentials 2
+
+Issuing organization*
+Cisco
+
+Date : August 23rd, 2025
+
+Credential URL
+https://www.credly.com/badges/b4a9b73f-4778-4b8f-be55-b5bf9c7a54aa/linked_in_profile
+
+Name*
+Python Essentials 1
+
+Issuing organization*
+Cisco
+
+Date : August 2nd, 2025
+
+Credential URL
+https://www.credly.com/badges/bb9bf99f-ff70-4f03-a898-721073a44d9a/linked_in_profile
+
+Name*
+Machine Learning
+
+Issuing organization*
+DeepLearning.AI
+
+Date : January 4th, 2025
+
+Credential ID
+3JO8H500W0AL
+
+Credential URL
+https://www.coursera.org/account/accomplishments/specialization/certificate/3JO8H500W0AL
+
+Name*
+Unsupervised Learning, Recommenders, Reinforcement Learning
+
+Issuing organization*
+Stanford University
+
+Date : June 4th, 2025
+
+Credential ID
+SJRUUBQBA05G
+
+Credential URL
+https://www.coursera.org/account/accomplishments/records/SJRUUBQBA05G
+
+Name*
+Advanced Learning Algorithms
+
+Issuing organization*
+DeepLearning.AI
+
+Date : January 24th, 2025
+
+Credential ID
+1FGXEVSQ6GR6
+
+Credential URL
+https://www.coursera.org/account/accomplishments/verify/1FGXEVSQ6GR6
+
+Name*
+Generative AI
+
+Issuing organization*
+GUVI Geek Networks, IITM Research Park
+
+Date : October 10th, 2024
+
+Credential ID
+12EaAB1M52858bL776
+
+Credential URL
+www.guvi.in/verify-certificate?id=12EaAB1M52858bL776
+
+Name*
+Supervised Machine Learning: Regression and Classification 
+
+Issuing organization*
+DeepLearning.AI, Stanford University
+
+Date : August 21st, 2024
+
+Credential ID
+1DV9RUX1LQYZ
+
+Credential URL
+https://www.coursera.org/account/accomplishments/records/1DV9RUX1LQYZ
+
+Name*
+Accenture North America - Data Analytics and Visualization Job Simulation
+
+Issuing organization*
+Forage
+
+Date : July 27th, 2024
+
+Credential ID
+mbnShMyMFhwKJrk58
+
+Credential URL
+https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_xAix8wYwtR5FfxATZ_1722081021984_completion_certificate.pdf
