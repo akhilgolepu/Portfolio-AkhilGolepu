@@ -64,11 +64,40 @@ export default function Contact() {
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+  // Function declared cleanly in component scope:
+  /** @param {any} data */
   const onSubmit = async (data) => {
     setSubmitState('loading');
-    await new Promise(r => setTimeout(r, 1800));
-    setSubmitState('success');
-    reset();
+
+    try {
+      const payload = {
+        ...data,
+        access_key: "aa93641f-6321-4167-b2a5-3a0824f9c5e9",
+      };
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitState('success');
+        reset(); 
+      } else {
+        setSubmitState('idle');
+        alert("Submission error. Please try again.");
+      }
+    } catch (error) {
+      console.error("Transmission failed:", error);
+      setSubmitState('idle');
+    }
+
     setTimeout(() => setSubmitState('idle'), 4000);
   };
 
@@ -211,7 +240,7 @@ export default function Contact() {
                     onBlur={e => { if (!errors.name) e.target.style.borderColor = 'var(--border-line)'; }}
                   />
                   {errors.name && (
-                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{errors.name.message}</p>
+                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{!!errors.name.message}</p>
                   )}
                 </div>
 
@@ -237,7 +266,7 @@ export default function Contact() {
                     onBlur={e => { if (!errors.email) e.target.style.borderColor = 'var(--border-line)'; }}
                   />
                   {errors.email && (
-                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{errors.email.message}</p>
+                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{!!errors.email.message}</p>
                   )}
                 </div>
 
@@ -260,7 +289,7 @@ export default function Contact() {
                     onBlur={e => { if (!errors.message) e.target.style.borderColor = 'var(--border-line)'; }}
                   />
                   {errors.message && (
-                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{errors.message.message}</p>
+                    <p className="font-mono text-xs mt-1.5" style={{ color: '#DC2626' }}>{!!errors.message.message}</p>
                   )}
                 </div>
 
