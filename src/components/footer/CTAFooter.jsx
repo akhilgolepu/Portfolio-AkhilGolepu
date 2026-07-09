@@ -67,9 +67,10 @@ export default function CTAFooter() {
             {/* Resume */}
             <SlideButton
               as="a"
-              href="https://media.base44.com/files/public/6a284caf55577447995efcb6/f5d7f3196_AkhilG_resume.pdf"
+              href="https://raw.githubusercontent.com/akhilgolepu/Portfolio-AkhilGolepu/main/resume/AkhilG_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              download="AkhilG_resume.pdf"
               className="justify-between px-8 py-5 rounded-2xl w-full"
             >
               <div style={{ textAlign: 'left' }}>
