@@ -1,8 +1,20 @@
 {
-  "name": "base44-app",
-  "private": true,
+  "name": "portfolio-akhilgolepu",
   "version": "0.0.0",
+  "private": true,
+  "description": "This is my personal portfolio",
+  "homepage": "https://github.com/akhilgolepu/Portfolio-AkhilGolepu#readme",
+  "bugs": {
+    "url": "https://github.com/akhilgolepu/Portfolio-AkhilGolepu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilgolepu/Portfolio-AkhilGolepu.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,8 +24,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@base44/sdk": "^0.8.32",
-    "@base44/vite-plugin": "^1.0.21",
     "@hello-pangea/dnd": "^17.0.0",
     "@hookform/resolvers": "^4.1.2",
     "@radix-ui/react-accordion": "^1.2.3",
@@ -96,5 +106,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2",
     "vite": "^6.1.0"
-  }
+  },
+  "keywords": []
 }

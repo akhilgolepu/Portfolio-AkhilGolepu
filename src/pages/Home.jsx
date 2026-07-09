@@ -8,14 +8,13 @@ import CertificationsSection from '@/components/certifications/CertificationsSec
 import CTAFooter from '@/components/footer/CTAFooter';
 import ProjectCarousel from '@/components/carousel/ProjectCarousel';
 
-const WELCOME_KEY = 'base44-welcome-shown';
-
 export default function Home() {
   const [preloaderDone, setPreloaderDone] = useState(false);
   const [showPreloader, setShowPreloader] = useState(false);
 
   useEffect(() => {
-    const alreadySeen = typeof window !== 'undefined' && localStorage.getItem(WELCOME_KEY) === 'true';
+    // Replaced the undefined WELCOME_KEY variable with a clean string literal
+    const alreadySeen = typeof window !== 'undefined' && localStorage.getItem('portfolio-preloader-seen') === 'true';
     if (alreadySeen) {
       setPreloaderDone(true);
       setShowPreloader(false);
@@ -25,7 +24,7 @@ export default function Home() {
   }, []);
 
   const handlePreloaderComplete = () => {
-    localStorage.setItem(WELCOME_KEY, 'true');
+    localStorage.setItem('portfolio-preloader-seen', 'true');
     setPreloaderDone(true);
   };
 
