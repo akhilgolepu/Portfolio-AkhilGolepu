@@ -70,7 +70,7 @@ export default function CTAFooter() {
               href="https://raw.githubusercontent.com/akhilgolepu/Portfolio-AkhilGolepu/main/resume/AkhilG_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="AkhilG_resume.pdf"
+              download="AkhilGolepu_resume.pdf"
               className="justify-between px-8 py-5 rounded-2xl w-full"
             >
               <div style={{ textAlign: 'left' }}>

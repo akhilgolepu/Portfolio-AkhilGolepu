@@ -43,14 +43,14 @@ const SOCIAL_LINKS = [
   },
   {
     label: 'Twitter / X',
-    handle: '@akhilgolepu',
+    handle: '@akhil_golepu',
     description: 'Thoughts & updates',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
       </svg>
     ),
-    href: 'https://twitter.com',
+    href: 'https://x.com/akhil_golepu',
     color: '#2563EB',
   },
 ];
@@ -247,7 +247,7 @@ export default function Contact() {
                     <span style={{ color: '#2563EB' }}>user@portfolio</span>:~$ enter_message
                   </label>
                   <textarea
-                    {...register('message', { required: 'Message is required', minLength: { value: 20, message: 'Minimum 20 characters' } })}
+                    {...register('message', { required: 'Message is required', minLength: { value: 10, message: 'Minimum 20 characters' } })}
                     placeholder="Tell me about your project, timeline, and goals..."
                     rows={5}
                     className="w-full rounded-xl px-5 py-3.5 font-body text-sm transition-all duration-200 outline-none resize-none"
