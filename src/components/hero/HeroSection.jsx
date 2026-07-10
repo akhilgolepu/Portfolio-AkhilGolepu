@@ -137,7 +137,7 @@ export default function HeroSection() {
             color: 'var(--text-muted)',
             letterSpacing: '-0.01em',
           }}>
-            Building end-to-end ML &amp; MLOps systems — from raw data to production-ready inference at scale.
+            Building to learn, deploying to scale.
           </AnimatedLine>
         </div>
 
@@ -194,7 +194,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.1, duration: 0.6 }}
         >
-          {['MLOps', 'Computer Vision', 'PyTorch', 'Kubernetes'].map((tag, i) => (
+          {['Java', 'Python', 'MLOps', 'Computer Vision', 'PyTorch'].map((tag, i) => (
             <span key={tag} className="font-mono text-xs uppercase" style={{
               color: 'var(--text-muted)',
               letterSpacing: '0.08em',

@@ -53,7 +53,7 @@ export default function CTAFooter() {
               lineHeight: 1.7,
               maxWidth: '380px',
             }}>
-              Open to full-time roles, research collaborations, and consulting engagements in ML/CV engineering.
+              Open to winter/summer internships and part-time engineering roles across ML, MLOps, AI, and Data Science.
             </p>
           </motion.div>
 

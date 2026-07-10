@@ -4,8 +4,8 @@ import { useRef } from 'react';
 const CAPABILITIES = [
   {
     id: 'ml',
-    title: 'ML Architectures',
-    description: 'Designing transformer-based, diffusion, and classical ML pipelines optimized for production-grade inference and training throughput.',
+    title: 'Machine Learning & DL',
+    description: 'Building and evaluating predictive models using Scikit-learn, TensorFlow, PyTorch, and Keras. Specialized in CNN architectures, transfer learning techniques, and rigorous model evaluation workflows.',
     icon: '⬡',
     span: 'col-span-2 row-span-2',
     spanMobile: 'col-span-1',
@@ -16,7 +16,7 @@ const CAPABILITIES = [
   {
     id: 'cv',
     title: 'Computer Vision',
-    description: 'Object detection, semantic segmentation, and optical flow systems using state-of-the-art backbone networks.',
+    description: 'Real-time object localization, tracking, and spatial text processing using YOLO and OpenCV. Expert in custom data augmentation, image preprocessing, segmentation, and feature extraction.',
     icon: '◎',
     span: 'col-span-1 row-span-1',
     pattern: 'rings',
@@ -26,7 +26,7 @@ const CAPABILITIES = [
   {
     id: 'mlops',
     title: 'MLOps & Automation',
-    description: 'Kubernetes-native training orchestration, CI/CD for model deployment, and automated retraining pipelines.',
+    description: 'Ensuring model governance, code lineage tracking, and automated asset reproducibility across full-stack architectures using DVC, MLflow, Git, and GitHub.',
     icon: '⟲',
     span: 'col-span-1 row-span-1',
     pattern: 'grid',
@@ -35,8 +35,8 @@ const CAPABILITIES = [
   },
   {
     id: 'data',
-    title: 'Data Engineering',
-    description: 'Streaming ETL pipelines, feature stores, and distributed data lakes handling petabyte-scale workloads.',
+    title: 'Data Science',
+    description: 'Executing complex exploratory data analysis, data manipulation, and clean feature engineering workflows utilizing Pandas, NumPy, Matplotlib, and Seaborn.',
     icon: '⬡',
     span: 'col-span-1 row-span-1',
     pattern: 'wave',
@@ -44,9 +44,9 @@ const CAPABILITIES = [
     size: 'small',
   },
   {
-    id: 'tools',
-    title: 'Tooling Ecosystem',
-    description: 'Proficient across PyTorch, JAX, TensorFlow, Ray, Kubeflow, MLflow, Weights & Biases, and Triton Inference Server.',
+    id: 'programming',
+    title: 'Programming & Environments',
+    description: 'Writing custom application layers and structural database schemas using Python, SQL (PostgreSQL), and Java across Linux (Ubuntu), Google Colab, and Jupyter environments.',
     icon: '⌬',
     span: 'col-span-2 row-span-1',
     spanMobile: 'col-span-1',
@@ -55,9 +55,9 @@ const CAPABILITIES = [
     size: 'wide',
   },
   {
-    id: 'research',
-    title: 'Research & Experimentation',
-    description: 'Translating SOTA arxiv papers into production systems. Rapid prototyping with systematic ablation studies.',
+    id: 'languages',
+    title: 'Languages Known',
+    description: 'Professional and bilingual communication capabilities for collaborative engineering environments: English, Telugu, and Hindi.',
     icon: '✦',
     span: 'col-span-1 row-span-1',
     pattern: 'pulse',
@@ -171,10 +171,8 @@ function BentoCard({ cap, index }) {
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      {/* Micro visualizer */}
       <MicroVisualizer pattern={cap.pattern} accent={cap.accent} />
 
-      {/* Icon */}
       <div
         className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 text-lg"
         style={{
@@ -186,7 +184,6 @@ function BentoCard({ cap, index }) {
         {cap.icon}
       </div>
 
-      {/* Content */}
       <h3 className="font-heading font-bold mb-3" style={{
         fontSize: cap.size === 'large' ? '22px' : '15px',
         letterSpacing: '-0.03em',
@@ -203,7 +200,6 @@ function BentoCard({ cap, index }) {
         {cap.description}
       </p>
 
-      {/* Tag */}
       <span className="font-mono absolute top-6 right-6 text-xs uppercase" style={{
         color: cap.accent,
         letterSpacing: '0.08em',
@@ -231,7 +227,7 @@ export default function BentoGrid() {
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-xs uppercase tracking-widest block mb-3" style={{ color: '#2563EB', letterSpacing: '0.1em' }}>
-            03 — Capabilities
+            03 — Skills & Capabilities
           </span>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <h2 className="font-heading font-bold" style={{
@@ -239,14 +235,14 @@ export default function BentoGrid() {
               letterSpacing: '-0.04em',
               color: 'var(--text-primary)',
             }}>
-              Technical Stack
+              Technical Stack & Expertise
             </h2>
             <p className="font-body max-w-sm" style={{
               color: 'var(--text-muted)',
               fontSize: '14px',
               lineHeight: 1.7,
             }}>
-              Specialized across the full ML lifecycle — from raw data to deployed models at scale.
+              Specialized across the full ML lifecycle — from structured data preprocessing to production-grade system engineering.
             </p>
           </div>
         </motion.div>
