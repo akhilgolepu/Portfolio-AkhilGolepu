@@ -16,7 +16,7 @@ const CERTIFICATES = [
     name: 'Python Essentials 2',
     issuer: 'Cisco',
     date: 'August 23, 2025',
-    url: 'https://www.credly.com/badges/b4a9b73f-4778-4f8b-be55-b5bf9c7a54aa/linked_in_profile',
+    url: 'https://www.credly.com/badges/b4a9b73f-4778-4b8f-be55-b5bf9c7a54aa/public_url',
     image: '/certificates/PythonEssentials2.jpg',
   },
   {

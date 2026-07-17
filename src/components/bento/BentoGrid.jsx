@@ -5,7 +5,7 @@ const CAPABILITIES = [
   {
     id: 'ml',
     title: 'Machine Learning & DL',
-    description: 'Building and evaluating predictive models using Scikit-learn, TensorFlow, PyTorch, and Keras. Specialized in CNN architectures, transfer learning techniques, and rigorous model evaluation workflows.',
+    description: 'Building and validating scalable predictive models using PyTorch, TensorFlow, Keras, and Scikit-learn. Specialized in custom CNN architectures, transfer learning techniques, and comprehensive model evaluation strategies optimized for real-world deployment.',
     icon: '⬡',
     span: 'col-span-2 row-span-2',
     spanMobile: 'col-span-1',
@@ -16,7 +16,7 @@ const CAPABILITIES = [
   {
     id: 'cv',
     title: 'Computer Vision',
-    description: 'Real-time object localization, tracking, and spatial text processing using YOLO and OpenCV. Expert in custom data augmentation, image preprocessing, segmentation, and feature extraction.',
+    description: 'Developing high-accuracy object detection, localization, and spatial tracking systems using YOLO and OpenCV. Proficient in structural image segmentation, multi-stage image preprocessing, feature extraction, and custom data augmentation pipelines.',
     icon: '◎',
     span: 'col-span-1 row-span-1',
     pattern: 'rings',
@@ -26,7 +26,7 @@ const CAPABILITIES = [
   {
     id: 'mlops',
     title: 'MLOps & Automation',
-    description: 'Ensuring model governance, code lineage tracking, and automated asset reproducibility across full-stack architectures using DVC, MLflow, Git, and GitHub.',
+    description: 'Orchestrating automated pipelines, model tracking, and data version control using DVC and MLflow. Implementing secure containerization, environment isolation, and streamlined CI/CD workflows utilizing Docker, Git, and GitHub.',
     icon: '⟲',
     span: 'col-span-1 row-span-1',
     pattern: 'grid',
@@ -36,7 +36,7 @@ const CAPABILITIES = [
   {
     id: 'data',
     title: 'Data Science',
-    description: 'Executing complex exploratory data analysis, data manipulation, and clean feature engineering workflows utilizing Pandas, NumPy, Matplotlib, and Seaborn.',
+    description: 'Executing complex exploratory data analysis and domain-specific feature engineering. Turning unstructured data into actionable intelligence using Pandas, NumPy, Matplotlib, and Seaborn for manipulation and data visualization.',
     icon: '⬡',
     span: 'col-span-1 row-span-1',
     pattern: 'wave',
@@ -45,8 +45,8 @@ const CAPABILITIES = [
   },
   {
     id: 'programming',
-    title: 'Programming & Environments',
-    description: 'Writing custom application layers and structural database schemas using Python, SQL (PostgreSQL), and Java across Linux (Ubuntu), Google Colab, and Jupyter environments.',
+    title: 'Programming & Infrastructure',
+    description: 'Writing scalable backend logic and structural database schemas using Python, SQL (PostgreSQL), and Java. Provisioning development workspaces and managing live application hosting across Linux (Ubuntu), Jupyter, Vercel, and Render.',
     icon: '⌬',
     span: 'col-span-2 row-span-1',
     spanMobile: 'col-span-1',
@@ -57,7 +57,7 @@ const CAPABILITIES = [
   {
     id: 'languages',
     title: 'Languages Known',
-    description: 'Professional and bilingual communication capabilities for collaborative engineering environments: English, Telugu, and Hindi.',
+    description: 'Bilingual and professional communication competencies tailored for collaborative, cross-functional engineering workspaces. Fluent in English, Telugu, and Hindi.',
     icon: '✦',
     span: 'col-span-1 row-span-1',
     pattern: 'pulse',
