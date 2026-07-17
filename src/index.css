@@ -283,7 +283,7 @@
 .text-surface-muted { color: var(--text-muted); }
 .border-surface { border-color: var(--border-line); }
 
-/* LOVABLE: Carousel 3D styles (copied/adapted) */
+/* Carousel 3D styles (copied/adapted) */
 .carousel-stage {
   perspective: 1600px;
   height: 480px;
@@ -319,7 +319,7 @@
 /* small helper for tag */
 .tag { padding: 6px 10px; border-radius: 9999px; font-weight: 600; font-size: 11px; }
 
-/* Preloader (Lovable) */
+/* Preloader */
 .preloader {
   position: fixed;
   inset: 0;

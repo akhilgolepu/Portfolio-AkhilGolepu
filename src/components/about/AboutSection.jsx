@@ -110,10 +110,13 @@ export default function AboutSection() {
           <div style={{ paddingTop: '4px' }}>
             <AnimatedSplitText
               lines={[
-                "I'm Akhil — a B.Tech AI/ML student at Vardhaman",
-                'College of Engineering (CGPA 8.12), specializing in',
-                'building production-ready ML systems that integrate',
-                'FastAPI, React, PostgreSQL, and automated pipelines.',
+                "I'm Akhil — a Computer Science Engineering student",
+                'specializing in AI & ML at Vardhaman College of Engineering.', 
+                'I operate at the intersection of data science and ',
+                'software infrastructure, transforming experimental ',
+                'models into robust, full-stack applications integrated',
+                'with FastAPI backends, interactive React interfaces, ',
+                'and persistent PostgreSQL layers.',
               ]}
               className="font-body"
               style={{
@@ -128,10 +131,12 @@ export default function AboutSection() {
 
             <AnimatedSplitText
               lines={[
-                'From ANPR systems with 99.48% mAP to churn',
-                'prediction pipelines with full model registries,',
-                'I architect end-to-end ML applications with',
-                'reproducibility, observability, and craft.',
+                'Focused heavily on the end-to-end MLOps lifecycle,', 
+                'I build automated pipelines that ensure complete data',
+                'lineage and model reproducibility using DVC and MLflow.',
+                'From training custom computer vision frameworks to deploying',
+                'predictive platforms with multi-state model registries,',
+                'I engineer intelligent software systems designed to scale.',
               ]}
               className="font-body"
               style={{
